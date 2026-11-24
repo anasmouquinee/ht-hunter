@@ -4,13 +4,11 @@
  */
 
 class TerminalEngine {
-  constructor() {
-    this.container = document.getElementById('terminal-shell');
-    this.output = document.getElementById('terminal-output');
-    this.input = document.getElementById('terminal-input');
+  constructor(outputElementId = 'terminal-output', inputElementId = 'terminal-input') {
+    this.output = document.getElementById(outputElementId);
+    this.input = document.getElementById(inputElementId);
+    this.container = document.getElementById('terminal-shell') || document.querySelector('.terminal-window');
     this.form = document.getElementById('terminal-form');
-
-    if (!this.container || !this.output || !this.input) return;
 
     this.history = [];
     this.historyIndex = -1;
@@ -33,24 +31,34 @@ class TerminalEngine {
       cv: this.cmdDownloadCv.bind(this),
       clear: this.cmdClear.bind(this)
     };
-
-    this.init();
   }
 
   init() {
-    this.form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const raw = this.input.value.trim();
-      if (!raw) return;
+    if (!this.input || !this.output) return;
 
-      this.history.push(raw);
-      this.historyIndex = this.history.length;
-      this.execute(raw);
-      this.input.value = '';
-    });
+    if (this.form) {
+      this.form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const raw = this.input.value.trim();
+        if (!raw) return;
+
+        this.history.push(raw);
+        this.historyIndex = this.history.length;
+        this.execute(raw);
+        this.input.value = '';
+      });
+    }
 
     this.input.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowUp') {
+      if (e.key === 'Enter') {
+        const raw = this.input.value.trim();
+        if (raw) {
+          this.history.push(raw);
+          this.historyIndex = this.history.length;
+          this.execute(raw);
+          this.input.value = '';
+        }
+      } else if (e.key === 'ArrowUp') {
         e.preventDefault();
         if (this.historyIndex > 0) {
           this.historyIndex--;
@@ -72,7 +80,7 @@ class TerminalEngine {
     });
 
     // Quick action buttons
-    const quickBar = document.querySelector('.terminal-quick-actions');
+    const quickBar = document.getElementById('terminal-quick-bar') || document.querySelector('.terminal-quick-bar') || document.querySelector('.terminal-quick-actions');
     if (quickBar) {
       quickBar.addEventListener('click', (e) => {
         const btn = e.target.closest('.terminal-quick-btn');

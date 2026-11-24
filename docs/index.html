@@ -873,7 +873,7 @@ tazihouda124@gmail.com</div>
         </div>
 
         <!-- Interactive Terminal Widget -->
-        <div class="terminal-window" aria-label="Console interactive de présentation">
+        <div id="terminal-shell" class="terminal-window" aria-label="Console interactive de présentation">
           <div class="terminal-header">
             <div class="terminal-dots">
               <span class="dot dot-red"></span>
@@ -901,10 +901,10 @@ tazihouda124@gmail.com</div>
             <button type="button" class="terminal-quick-btn" data-cmd="download-cv">download-cv</button>
           </div>
 
-          <div class="terminal-input-form">
+          <form id="terminal-form" class="terminal-input-form">
             <span class="terminal-prompt-arrow">➜</span>
             <input type="text" id="terminal-input" class="terminal-input" placeholder="Tapez une commande (ex: help, bio, skills, leoni, ocp, Tab=complétion)..." autocomplete="off" spellcheck="false">
-          </div>
+          </form>
         </div>
       </section>
 
