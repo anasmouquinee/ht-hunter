@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.env
+
+# LaTeX auxiliary files
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Personal CVs, media & archives
+*.pdf
+*.tex
+*.png
+*.jpg
+*.jpeg
+*.zip
+!docs/assets/*.png
+!docs/assets/*.jpg
+!cv_ats_pfe.pdf
+!docs/cv_ats_pfe.pdf
+!dossier_candidature_houda_tazi.pdf
+!docs/dossier_candidature_houda_tazi.pdf
+
+# Agent and tooling configs
+.github/agents/
+.github/hooks/
+.github/skills/
+
+# Generated application letters (keep directory & canonical Coface sample)
+letters/*.html
+letters/*.txt
+!letters/.gitkeep
+!letters/Lettre_Motivation_Coface_DataLab_Anas_Mouqine.*
+!letters/Lettre_Motivation_Natixis_CIB_ML_Research_Anas_Mouqine.*
+
+
