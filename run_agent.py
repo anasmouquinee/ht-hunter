@@ -2,6 +2,8 @@
 
 import argparse
 import sys
+import time
+from datetime import datetime
 from typing import List, Optional
 
 # Ensure UTF-8 output encoding across Windows shells and GitHub Actions runners
@@ -446,10 +448,35 @@ def run_agent(
             simulated=config.dry_run,
         )
 
-    # 5. Anonymous Career Digest (if qualified offers found and enabled)
-    if config.digest_enabled and qualified_offers:
-        print("\n📬 Génération & Dispatch du Digest Anonyme Carrière pour Houda Tazi...")
-        AnonymousDigestNotifier().send_digest(qualified_offers[:10], force_live=not config.dry_run)
+    # 5. Anonymous Career Digest
+    if config.digest_enabled:
+        print("\n📫 Préparation du bulletin anonyme d'offres d'emploi pour Houda Tazi...")
+        digest_candidates = qualified_offers[:10]
+        if not digest_candidates:
+            # Fallback to top scored offers in database
+            all_db_offers = []
+            for off_id, o_data in state_manager.data.get("offers", {}).items():
+                off_obj = JobOffer(
+                    id=off_id,
+                    title=o_data.get("title", ""),
+                    company=o_data.get("company", ""),
+                    location=o_data.get("location", ""),
+                    url=o_data.get("url", ""),
+                    source=o_data.get("source", "saved"),
+                    description=o_data.get("description", ""),
+                    score=o_data.get("score", 0),
+                    matched_skills=o_data.get("matched_skills", []),
+                )
+                if evaluator.is_industrial_offer(off_obj) and evaluator.is_contract_match(off_obj):
+                    all_db_offers.append(off_obj)
+            all_db_offers.sort(key=lambda o: (o.score or 0), reverse=True)
+            digest_candidates = all_db_offers[:10]
+
+        if digest_candidates:
+            print(f"   -> Dispatch du digest ({len(digest_candidates)} opportunités sélectionnées)...")
+            AnonymousDigestNotifier().send_digest(digest_candidates, force_live=not config.dry_run)
+        else:
+            print("   ⚠️ Aucune offre qualifiée disponible pour le digest.")
 
     # 6. Summary
     print("\n" + "=" * 70)
@@ -463,10 +490,55 @@ def run_agent(
     return 0
 
 
+def run_loop(
+    interval_hours: float = 6.0,
+    dry_run: bool = True,
+    custom_keywords: Optional[List[str]] = None,
+    location: str = "Casablanca",
+    limit: Optional[int] = None,
+    auto_apply: bool = False,
+) -> None:
+    """Executes run_agent on a recurring loop every interval_hours."""
+    print("=" * 70)
+    print("🔄 INDUSTRIAL HUNTER : MODE BOUCLE / DAEMON ACTIVÉ")
+    print(f"⏱️  Intervalle de veille & d'envoi : Toutes les {interval_hours} heures")
+    print("💡 Appuyez sur Ctrl+C à tout moment pour arrêter le démon.")
+    print("=" * 70)
+
+    cycle = 1
+    while True:
+        now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        print(f"\n🚀 [Cycle #{cycle}] Démarrage de la recherche et de la veille ({now_str})...")
+        try:
+            run_agent(
+                dry_run=dry_run,
+                custom_keywords=custom_keywords,
+                location=location,
+                limit=limit,
+                auto_apply=auto_apply,
+            )
+        except Exception as e:
+            logger.error("Erreur durant le cycle #%d : %s", cycle, e)
+
+        sleep_seconds = int(interval_hours * 3600)
+        next_run = datetime.now().timestamp() + sleep_seconds
+        next_run_str = datetime.fromtimestamp(next_run).strftime("%Y-%m-%d %H:%M:%S")
+        print(f"\n⏳ Cycle #{cycle} terminé avec succès.")
+        print(f"💤 Prochaine recherche automatique programmée à : {next_run_str} (dans {interval_hours}h / {sleep_seconds}s)")
+        try:
+            time.sleep(sleep_seconds)
+        except KeyboardInterrupt:
+            print("\n🛑 Arrêt du mode boucle demandé par l'utilisateur.")
+            break
+        cycle += 1
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Industrial Hunter & Career Automation Agent for Houda Tazi")
     parser.add_argument("--live", action="store_true", help="Run in LIVE mode (actually send application emails)")
     parser.add_argument("--dry-run", action="store_true", help="Run in simulation mode (default)")
+    parser.add_argument("--loop", action="store_true", help="Run continuously in a loop daemon every X hours")
+    parser.add_argument("--interval-hours", type=float, default=6.0, help="Interval between runs in loop mode (default: 6.0 hours)")
     parser.add_argument("--send-digest", action="store_true", help="Format and send anonymous career digest of qualified offers to Houda")
     parser.add_argument("--digest-live", action="store_true", help="Send the digest via real SMTP instead of dry-run preview")
     parser.add_argument("--test-notifications", action="store_true", help="Send a test notification card to Telegram and Discord")
@@ -497,6 +569,17 @@ if __name__ == "__main__":
 
     is_live = args.live and not args.dry_run
     custom_kws = [args.keyword] if args.keyword else None
+
+    if args.loop:
+        run_loop(
+            interval_hours=args.interval_hours,
+            dry_run=not is_live,
+            custom_keywords=custom_kws,
+            location=args.location,
+            limit=args.limit,
+            auto_apply=args.auto_apply,
+        )
+        sys.exit(0)
 
     sys.exit(run_agent(
         dry_run=not is_live,

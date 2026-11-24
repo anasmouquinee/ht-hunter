@@ -2,8 +2,8 @@ name: Industrial Hunter Agent (Houda Tazi - Génie Industriel)
 
 on:
   schedule:
-    # Exécution 24h/24, 7j/7 (Toutes les 3 heures : 00h, 03h, 06h, 09h, 12h, 15h, 18h, 21h UTC)
-    - cron: '0 */3 * * *'
+    # Exécution 24h/24, 7j/7 toutes les 6 heures (00h, 06h, 12h, 18h UTC)
+    - cron: '0 */6 * * *'
   workflow_dispatch:
     inputs:
       live_mode:
@@ -83,16 +83,12 @@ jobs:
             echo "🛡 Exécution en mode SIMULATION (DRY-RUN sécurisé)"
           fi
 
-          if [ "${{ github.event.inputs.send_digest }}" != "false" ]; then
-            echo "📬 Envoi du bulletin anonyme digest activé"
-            FLAGS="$FLAGS --send-digest"
-          fi
-
           if [ "${{ github.event.inputs.auto_apply }}" = "true" ] || [ "${{ secrets.AUTO_PLATFORM_APPLY }}" = "true" ] || [ "${{ secrets.AUTO_EASY_APPLY }}" = "true" ]; then
             echo "🤖 Mode Postulation Automatisée Multi-Plateforme activé"
             FLAGS="$FLAGS --auto-apply"
           fi
 
+          echo "🚀 Exécution du cycle complet : scraping, évaluation et envoi du digest..."
           python run_agent.py $FLAGS
 
       - name: 💾 Sauvegarde de l'état des candidatures (Anti-Doublon)
