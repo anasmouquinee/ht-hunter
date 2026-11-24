@@ -63,28 +63,56 @@ def test_notifications() -> int:
 
 
 def send_digest_cli(limit: Optional[int] = 10, force_live: bool = False) -> int:
-    """Dispatches the anonymous career digest for Houda Tazi."""
+    """Dispatches the anonymous career digest for Houda Tazi (strictly qualified industrial job offers)."""
     state_manager = StateManager()
+    evaluator = OfferEvaluator()
     offers_dict = state_manager.data.get("offers", {})
     if not offers_dict:
         print("⚠️ Aucune offre trouvée dans la base de données locale (data/applied_offers.json).")
         return 1
-    offers_list = []
+
+    banned_keywords = {
+        "intelligence artificielle", "ia", "machine learning", "deep learning",
+        "rag", "langchain", "data science", "full stack", "react", "frontend",
+        "backend", "stage pfe", "pfe", "projet de fin d'études"
+    }
+
+    qualified_jobs: List[JobOffer] = []
     for offer_id, data in offers_dict.items():
-        offers_list.append(JobOffer(
+        title = data.get("title", "Ingénieur(e) Génie Industriel")
+        desc = data.get("description", "")
+        offer = JobOffer(
             id=offer_id,
-            title=data.get("title", "Ingénieur(e) Génie Industriel"),
-            company=data.get("company", "Entreprise"),
+            title=title,
+            company=data.get("company", "Entreprise Industrielle"),
             location=data.get("location", "Casablanca-Settat, Maroc"),
             url=data.get("url", ""),
             source=data.get("source", "saved"),
-            description=data.get("description", ""),
-            matched_skills=data.get("matched_skills", []),
-            score=data.get("score", 80),
-        ))
-    offers_list.sort(key=lambda o: (o.score or 0), reverse=True)
+            description=desc,
+            contact_email=data.get("contact_email"),
+            linkedin_url=data.get("linkedin_url"),
+            hr_name=data.get("hr_name"),
+            hr_linkedin_url=data.get("hr_linkedin_url"),
+            is_remunerated=data.get("is_remunerated", True),
+        )
+        evaluated = evaluator.evaluate(offer)
+
+        skills_lower = [s.lower() for s in (evaluated.matched_skills or [])]
+        has_banned = any(b in skills_lower for b in banned_keywords)
+
+        if (evaluator.is_industrial_offer(evaluated)
+            and evaluator.is_contract_match(evaluated)
+            and not has_banned
+            and (evaluated.score or 0) >= 55):
+            qualified_jobs.append(evaluated)
+
+    if not qualified_jobs:
+        print("⚠️ Aucune offre d'emploi en Génie Industriel (CDI/CDD/Junior) n'a satisfait les critères de qualification.")
+        return 1
+
+    qualified_jobs.sort(key=lambda o: (o.score or 0), reverse=True)
     digest = AnonymousDigestNotifier()
-    success = digest.send_digest(offers_list[:limit], force_live=force_live)
+    success = digest.send_digest(qualified_jobs[:limit], force_live=force_live)
     return 0 if success else 1
 
 
@@ -237,15 +265,15 @@ def run_agent(
                 logger.warning("Erreur scraper %s sur '%s': %s", scraper.name, kw, e)
         print(f"   -> {len(all_raw_offers)} offres cumulées uniques.")
 
-    # 3. Evaluate & Filter strictly for AI PFE & Recency
-    print(f"\n🧠 Évaluation, filtrage IA et contrôle de fraîcheur de {len(all_raw_offers)} offres...")
+    # 3. Evaluate & Filter strictly for Industrial Engineering Jobs & Recency
+    print(f"\n🧠 Évaluation, filtrage industriel et contrôle de fraîcheur de {len(all_raw_offers)} offres...")
     qualified_offers: List[JobOffer] = []
 
     for offer in all_raw_offers:
         evaluated = evaluator.evaluate(offer)
-        # Require genuine Tech domain (Software, Data, AI, Web, Cloud), student PFE internship, and recent publication
-        if (evaluator.is_pfe_offer(evaluated) and 
-            evaluator.is_tech_offer(evaluated) and 
+        # Require genuine Industrial Engineering domain, real job opportunity (CDI/CDD/Junior), and recent publication
+        if (evaluator.is_contract_match(evaluated) and 
+            evaluator.is_industrial_offer(evaluated) and 
             evaluator.is_recent_enough(evaluated) and 
             evaluated.score >= 50):
             qualified_offers.append(evaluated)
@@ -261,7 +289,7 @@ def run_agent(
     )
     if limit:
         qualified_offers = qualified_offers[:limit]
-    print(f"   -> {len(qualified_offers)} offres PFE IA qualifiées retenues.")
+    print(f"   -> {len(qualified_offers)} offres d'emploi en Génie Industriel qualifiées retenues.")
 
     # 4. Process each qualified offer
     new_offers_count = 0

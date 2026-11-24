@@ -157,3 +157,40 @@ def test_company_directory_auto_email_resolution():
         source="rekrute"
     )
     assert offer_alten.contact_email == "recrutement.maroc@alten.com"
+
+
+def test_evaluator_rejects_pfe_and_internships():
+    """Verifies that pure PFE internships are disqualified in favor of real job offers."""
+    evaluator = OfferEvaluator()
+    offer_pfe = JobOffer(
+        title="Stage PFE – Ingénieur Amélioration Continue / Lean",
+        company="Industrie Automobile Maroc",
+        location="Casablanca",
+        url="https://example.com/stage-pfe-lean",
+        description="Sujet de Stage PFE de 6 mois pour étudiant en fin d'études d'ingénieur. Encadrement projet Lean.",
+        source="dreamjob"
+    )
+
+    assert evaluator.is_contract_match(offer_pfe) is False
+    assert evaluator.is_industrial_offer(offer_pfe) is False
+    evaluated = evaluator.evaluate(offer_pfe)
+    assert evaluated.score == 0
+
+
+def test_evaluator_rejects_ai_data_science_offers():
+    """Verifies that software, AI, and Data Science offers from legacy databases are disqualified."""
+    evaluator = OfferEvaluator()
+    offer_ai = JobOffer(
+        title="Opportunités PFE chez BTP Consulting, postulez dès maintenant",
+        company="BTP Consulting",
+        location="Casablanca",
+        url="https://example.com/btp-ai",
+        description="Stage pour spécialiste en Intelligence Artificielle, Machine Learning, RAG et LangChain.",
+        source="linkedin_guest"
+    )
+
+    assert evaluator.is_industrial_offer(offer_ai) is False
+    assert evaluator.is_contract_match(offer_ai) is False
+    evaluated = evaluator.evaluate(offer_ai)
+    assert evaluated.score == 0
+

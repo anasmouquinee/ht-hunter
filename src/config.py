@@ -26,7 +26,7 @@ class CandidateProfile(BaseModel):
     school: str = "École Nationale des Sciences Appliquées (ENSA El Jadida)"
     education_level: str = "Diplôme d'Ingénieur d'État (Promotion 2026, mention Bien)"
     specialization: str = "Génie Industriel (Production, Supply Chain, Qualité, Lean & Amélioration Continue)"
-    target_contracts: str = "CDI, CDD, Emploi Premier Poste / Junior, Stages Pré-embauche & PFE (2026)"
+    target_contracts: str = "CDI, CDD, Emploi Ingénieur Débutant / Junior (Génie Industriel)"
     cv_path: Path = BASE_DIR / "dossier_candidature_houda_tazi.pdf"
 
     # Core technical keywords for scoring -- Industrial Engineering, Lean, Supply Chain, Quality
@@ -73,9 +73,9 @@ class AgentConfig(BaseModel):
         "Ingénieur Génie Industriel", "Ingénieur Méthodes", "Ingénieur Production",
         "Ingénieur Amélioration Continue", "Ingénieur Lean Manufacturing",
         "Ingénieur Supply Chain", "Ingénieur Logistique", "Ingénieur Qualité",
-        "Ingénieur Planification & Ordonnancement", "Ingénieur Process",
-        "Consultant Génie Industriel / Supply Chain", "Stage Pré-embauche Génie Industriel",
-        "Stage PFE Génie Industriel", "Stage PFE Production", "Stage PFE Supply Chain"
+        "Ingénieur Planification & Ordonnancement", "Ingénieur Process & Industrialisation",
+        "Consultant Génie Industriel / Supply Chain", "Ingénieur Débutant Génie Industriel",
+        "Ingénieur Junior Production / Qualité / Logistique"
     ]
 
     search_keywords: list[str] = [
@@ -88,12 +88,8 @@ class AgentConfig(BaseModel):
         "ingenieur qualite",
         "amelioration continue",
         "lean manufacturing",
-        "stage pfe genie industriel",
-        "stage pfe production",
-        "stage pfe supply chain",
-        "stage pfe logistique",
-        "stage pfe qualite",
-        "stage pre-embauche genie industriel",
+        "cdi genie industriel",
+        "recrutement ingenieur industriel",
         "gestion des stocks",
         "ordonnancement",
         "planification industrielle",
@@ -116,7 +112,7 @@ class AgentConfig(BaseModel):
     # Anonymous Offer Digest Feature (Surprise delivery to Houda's personal email)
     digest_enabled: bool = Field(default_factory=lambda: os.getenv("DIGEST_ENABLED", "true").lower() in ("true", "1", "yes"))
     digest_recipient: str = Field(default_factory=lambda: os.getenv("DIGEST_RECIPIENT", "tazihouda1108@gmail.com"))
-    digest_sender_name: str = Field(default_factory=lambda: os.getenv("DIGEST_SENDER_NAME", "Veille Opportunités Génie Industriel"))
+    digest_sender_name: str = Field(default_factory=lambda: os.getenv("DIGEST_SENDER_NAME", "Veille Opportunités Emploi · Génie Industriel"))
 
     # LinkedIn & Platform Accounts
     linkedin_li_at: str = Field(default_factory=lambda: os.getenv("LINKEDIN_LI_AT", ""))

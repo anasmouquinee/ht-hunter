@@ -11,29 +11,92 @@ from src.utils.date_parser import is_recent_offer, parse_offer_age_days
 class OfferEvaluator:
     """Evaluates, filters, and scores scraped job offers strictly for Industrial Engineering."""
 
-    # Target Contract & Career Stage Identifiers (Includes CDI, CDD, Junior & Stages)
+    # Target Contract Keywords -- Focus strictly on real employment (CDI, CDD, Junior, Débutant)
     TARGET_CONTRACT_KEYWORDS = [
         r'\bcdi\b',
         r'\bcdd\b',
-        r'\bstage\b',
-        r'\bpfe\b',
-        r'projet de fin d[\'’]études',
-        r'projet de fin d[\'’]etudes',
-        r'stage pfe',
-        r'stage pré-embauche',
-        r'stage pre-embauche',
-        r'stagiaire',
-        r'pré-embauche',
-        r'pre-embauche',
+        r'\bemploi\b',
+        r'\bembauche\b',
+        r'\brecrute\b',
+        r'\brecrutement\b',
+        r'ingénieur d[\'’]état',
+        r'ingenieur d[\'’]etat',
         r'jeune diplômé',
         r'jeune diplome',
         r'ingénieur débutant',
         r'ingenieur debutant',
         r'ingénieur junior',
         r'ingenieur junior',
-        r'junior',
-        r'recrutement',
+        r'\bjunior\b',
+        r'\bdébutant\b',
+        r'\bdebutant\b',
+        r'premier emploi',
         r'opportunité',
+        r'poste',
+    ]
+
+    # Explicit Disqualifiers for PFE Stages / Student Internships (User requested job offers, NOT PFE)
+    STAGE_PFE_DISQUALIFIERS = [
+        r'\bpfe\b',
+        r'stage pfe',
+        r'stage de fin d[\'’]études',
+        r'stage de fin d[\'’]etudes',
+        r'projet de fin d[\'’]études',
+        r'projet de fin d[\'’]etudes',
+        r'stage d[\'’]observation',
+        r'stage d[\'’]initiation',
+        r'stage d[\'’]application',
+        r'stage ouvrier',
+        r'stagiaire pfe',
+        r'stage non rémunéré',
+        r'sujet pfe',
+        r'mémoire de fin d[\'’]études',
+        r'stage 6 mois',
+        r'recherche de stage',
+        r'demande de stage',
+    ]
+
+    # Tech, Software & AI Disqualifiers (To prevent Data Science / AI / Web Dev offers from leaking)
+    TECH_AI_DISQUALIFIERS = [
+        r'intelligence artificielle',
+        r'\bia\b',
+        r'machine learning',
+        r'deep learning',
+        r'data science',
+        r'data scientist',
+        r'data analyst',
+        r'\bllm\b',
+        r'\brag\b',
+        r'langchain',
+        r'\bnlp\b',
+        r'computer vision',
+        r'développeur',
+        r'developpeur',
+        r'developer',
+        r'software engineer',
+        r'fullstack',
+        r'full stack',
+        r'frontend',
+        r'front-end',
+        r'backend',
+        r'back-end',
+        r'react',
+        r'angular',
+        r'vuejs',
+        r'vue\.js',
+        r'node\.?js',
+        r'python developer',
+        r'devops',
+        r'cloud engineer',
+        r'cloud architect',
+        r'cybersecurité',
+        r'cybersecurite',
+        r'cybersecurity',
+        r'webmaster',
+        r'php',
+        r'laravel',
+        r'symfony',
+        r'wordpress',
     ]
 
     # Industrial Engineering Core Keywords (Case-insensitive)
@@ -218,43 +281,61 @@ class OfferEvaluator:
         desc = (offer.description or "").lower()
         combined = f"{title} {desc}"
 
-        # 1. Reject if title explicitly states a non-industrial role
+        # 1. Disqualify pure PFE / internships (looking strictly for jobs)
+        for stg in self.STAGE_PFE_DISQUALIFIERS:
+            if re.search(stg, title, re.IGNORECASE):
+                return False
+
+        # 2. Reject if title explicitly states a non-industrial role
         for disq in self.NON_INDUSTRIAL_DISQUALIFIERS:
             if re.search(disq, title, re.IGNORECASE):
                 return False
 
-        # 2. Reject senior positions requiring > 5 years
+        # 3. Reject pure tech/AI developer offers
+        for tech in self.TECH_AI_DISQUALIFIERS:
+            if re.search(tech, title, re.IGNORECASE):
+                return False
+
+        # 4. Reject senior positions requiring > 5 years
         for sen in self.SENIOR_DISQUALIFIERS:
             if re.search(sen, combined, re.IGNORECASE):
                 return False
 
-        # 3. Check for Industrial Core Keywords
+        # 5. Check for Industrial Core Keywords
         for kw in self.INDUSTRIAL_CORE_KEYWORDS:
             if re.search(kw, combined, re.IGNORECASE):
                 return True
 
         return False
 
-    # Backwards compatibility alias
-    is_tech_offer = is_industrial_offer
-
     def is_contract_match(self, offer: JobOffer) -> bool:
-        """Verifies if the offer matches the targeted contracts (CDI, CDD, Junior, Stage Pré-embauche, PFE)."""
+        """Verifies if the offer matches real job opportunities (CDI, CDD, Junior, Débutant) and NOT pure PFE internships."""
         title = (offer.title or "").lower()
         desc = (offer.description or "").lower()
         combined = f"{title} {desc}"
 
-        # Check for senior disqualifiers
+        # 1. Disqualify pure PFE / student internships
+        for stg in self.STAGE_PFE_DISQUALIFIERS:
+            if re.search(stg, title, re.IGNORECASE):
+                return False
+
+        # 2. Check for senior disqualifiers
         for sen in self.SENIOR_DISQUALIFIERS:
             if re.search(sen, combined, re.IGNORECASE):
                 return False
 
-        # If any target contract is matched, or general industrial opening
+        # 3. If any target contract is matched, or general industrial opening
         for kw in self.TARGET_CONTRACT_KEYWORDS:
             if re.search(kw, combined, re.IGNORECASE):
                 return True
 
-        return True
+        # Accept if it is an industrial position title without senior or pfe flags
+        if any(re.search(kw, title, re.IGNORECASE) for kw in [
+            r'ingénieur', r'ingenieur', r'consultant', r'responsable', r'coordinateur', r'chargé'
+        ]):
+            return True
+
+        return False
 
     # Backwards compatibility aliases
     is_tech_offer = is_industrial_offer
@@ -277,7 +358,7 @@ class OfferEvaluator:
         Calculates a score from 0 to 100 representing suitability for Houda Tazi.
         Evaluates matches across Production, Supply Chain, Lean, Quality and Tools.
         """
-        if not self.is_industrial_offer(offer):
+        if not self.is_industrial_offer(offer) or not self.is_contract_match(offer):
             return 0
 
         title = (offer.title or "").lower()
@@ -299,6 +380,14 @@ class OfferEvaluator:
             if re.search(kw, title, re.IGNORECASE):
                 score += 15
                 break
+
+        # Contract bonuses (CDI / CDD / Débutant / Junior)
+        if re.search(r'\bcdi\b', combined, re.IGNORECASE):
+            score += 10
+        elif re.search(r'\bcdd\b', combined, re.IGNORECASE):
+            score += 5
+        if re.search(r'débutant|debutant|junior|jeune diplômé', combined, re.IGNORECASE):
+            score += 8
 
         # Industrial sector booster bonus
         for b in self.INDUSTRIAL_SECTOR_BOOSTERS:

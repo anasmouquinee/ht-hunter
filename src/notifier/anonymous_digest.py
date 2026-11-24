@@ -16,7 +16,7 @@ from src.utils.logger import logger
 class AnonymousDigestNotifier:
     """
     Formats and dispatches a clean, executive career digest presenting the top qualified
-    industrial offers directly to Houda Tazi's personal email (tazihouda1108@gmail.com).
+    industrial job offers directly to Houda Tazi's personal email (tazihouda1108@gmail.com).
     
     Styled completely neutrally as an automated career intelligence alert service,
     allowing the results to be delivered as an inspiring professional surprise.
@@ -27,17 +27,26 @@ class AnonymousDigestNotifier:
         self.sender_name = config.digest_sender_name
 
     def build_digest_html(self, offers: List[JobOffer], title: Optional[str] = None) -> str:
-        """Builds a high-craft, mobile-responsive HTML newsletter email for job alerts."""
+        """Builds a high-craft, mobile-responsive HTML newsletter email for industrial job alerts."""
         date_str = datetime.now().strftime("%d/%m/%Y")
         offers_count = len(offers)
 
         cards_html = ""
         for i, offer in enumerate(offers, 1):
-            title = html.escape(offer.title or "Ingénieur(e) Génie Industriel")
+            o_title = html.escape(offer.title or "Ingénieur(e) Génie Industriel")
             company = html.escape(offer.company or "Entreprise Industrielle")
             location = html.escape(offer.location or "Casablanca-Settat / Maroc")
             url = html.escape(offer.url or "#")
             score = offer.score or 85
+
+            # Contract badge detection
+            lower_comb = f"{(offer.title or '')} {(offer.description or '')}".lower()
+            if "cdi" in lower_comb:
+                contract_badge = '<span style="background:#dcfce7;color:#15803d;font-size:11px;font-weight:700;padding:3px 8px;border-radius:12px;margin-right:6px;">CDI</span>'
+            elif "cdd" in lower_comb:
+                contract_badge = '<span style="background:#fef3c7;color:#b45309;font-size:11px;font-weight:700;padding:3px 8px;border-radius:12px;margin-right:6px;">CDD</span>'
+            else:
+                contract_badge = '<span style="background:#e0e7ff;color:#4338ca;font-size:11px;font-weight:700;padding:3px 8px;border-radius:12px;margin-right:6px;">EMPLOI DIRECT</span>'
 
             skills_badges = ""
             if offer.matched_skills:
@@ -47,11 +56,14 @@ class AnonymousDigestNotifier:
             cards_html += f"""
             <div style="background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:20px;margin-bottom:16px;box-shadow:0 2px 4px rgba(0,0,0,0.03);">
               <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;">
-                <span style="background:#e0f2fe;color:#0284c7;font-size:11px;font-weight:700;padding:3px 10px;border-radius:12px;letter-spacing:0.02em;">OFFRE RECOMMANDÉE · ADÉQUATION {score}%</span>
+                <div>
+                  {contract_badge}
+                  <span style="background:#e0f2fe;color:#0284c7;font-size:11px;font-weight:700;padding:3px 10px;border-radius:12px;letter-spacing:0.02em;">ADÉQUATION {score}%</span>
+                </div>
                 <span style="color:#64748b;font-size:12px;">{location}</span>
               </div>
-              <h3 style="margin:8px 0 4px 0;font-size:17px;color:#0f172a;line-height:1.3;">{title}</h3>
-              <p style="margin:0 0 12px 0;font-size:14px;color:#475569;font-weight:600;">🏢 {company}</p>
+              <h3 style="margin:8px 0 4px 0;font-size:17px;color:#0f172a;line-height:1.3;">{o_title}</h3>
+              <p style="margin:0 0 12px 0;font-size:14px;color:#475569;font-weight:600;">🏭 {company}</p>
               
               <div style="margin-bottom:14px;">
                 {skills_badges}
@@ -67,17 +79,17 @@ class AnonymousDigestNotifier:
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Veille Opportunités Industrielles</title>
+  <title>Veille Opportunités Emploi · Génie Industriel</title>
 </head>
 <body style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background-color:#f8fafc;color:#1e293b;margin:0;padding:24px 12px;">
   <div style="max-width:640px;margin:0 auto;background:#ffffff;border-radius:16px;overflow:hidden;border:1px solid #e2e8f0;box-shadow:0 4px 12px rgba(0,0,0,0.05);">
     
     <!-- Header Banner -->
     <div style="background:linear-gradient(135deg, #0f172a 0%, #1e293b 100%);padding:32px 24px;text-align:center;color:#ffffff;">
-      <span style="display:inline-block;background:rgba(2,132,199,0.25);color:#38bdf8;font-size:12px;font-weight:700;padding:4px 14px;border-radius:20px;margin-bottom:12px;letter-spacing:0.05em;">VEILLE CARRIÈRE &amp; INGÉNIERIE</span>
-      <h1 style="margin:0 0 8px 0;font-size:22px;font-weight:800;letter-spacing:-0.02em;">Sélection d'Opportunités · Génie Industriel</h1>
+      <span style="display:inline-block;background:rgba(2,132,199,0.25);color:#38bdf8;font-size:12px;font-weight:700;padding:4px 14px;border-radius:20px;margin-bottom:12px;letter-spacing:0.05em;">VEILLE CARRIÈRE &amp; INGÉNIERIE INDUSTRIELLE</span>
+      <h1 style="margin:0 0 8px 0;font-size:22px;font-weight:800;letter-spacing:-0.02em;">Sélection d'Opportunités d'Emploi · Génie Industriel</h1>
       <p style="margin:0;font-size:14px;color:#94a3b8;">
-        {offers_count} opportunité(s) ciblée(s) en Production, Supply Chain, Lean &amp; Qualité sélectionnée(s) pour votre profil au {date_str}.
+        {offers_count} opportunité(s) ciblée(s) (CDI, CDD &amp; Postes Juniors) en Production, Supply Chain, Méthodes &amp; Qualité sélectionnée(s) pour votre profil au {date_str}.
       </p>
     </div>
 
@@ -110,7 +122,7 @@ class AnonymousDigestNotifier:
 
         html_content = self.build_digest_html(offers)
         date_str = datetime.now().strftime("%d/%m/%Y")
-        subject = f"🎯 [Veille Carrière] {len(offers)} Opportunités en Génie Industriel sélectionnées pour vous ({date_str})"
+        subject = f"🎯 [Veille Emploi] {len(offers)} Opportunités en Génie Industriel sélectionnées pour vous ({date_str})"
 
         # Dry-run handling: write preview to disk
         preview_file = config.letters_dir / "digest_preview_houda_tazi.html"
@@ -124,7 +136,7 @@ class AnonymousDigestNotifier:
 
         if config.dry_run and not force_live:
             print("\n" + "=" * 65)
-            print("📬 [SIMULATION DRY-RUN] DIGEST ANONYME D'OFFRES")
+            print("📫 [SIMULATION DRY-RUN] DIGEST ANONYME D'OFFRES D'EMPLOI")
             print("=" * 65)
             print(f"Destinataire : {self.recipient}")
             print(f"Expéditeur   : {self.sender_name} <{config.gmail_user}>")
