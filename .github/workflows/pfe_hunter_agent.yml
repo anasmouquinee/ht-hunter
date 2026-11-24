@@ -1,4 +1,4 @@
-name: PFE Auto-Hunter Agent (Morocco - Casablanca)
+name: Industrial Hunter Agent (Houda Tazi - Génie Industriel)
 
 on:
   schedule:
@@ -11,6 +11,12 @@ on:
         required: false
         type: boolean
         default: false
+
+      send_digest:
+        description: 'Envoyer le bulletin anonyme digest vers tazihouda1108@gmail.com'
+        required: false
+        type: boolean
+        default: true
 
       auto_apply:
         description: 'Activer la postulation automatique LinkedIn Easy Apply (Cloud Browser)'
@@ -43,18 +49,19 @@ jobs:
           pip install -r requirements.txt
           playwright install chromium --with-deps
 
-      - name: 📄 Vérification de la présence du CV ATS
+      - name: 📄 Vérification de la présence du Dossier Candidature
         run: |
-          if [ ! -f "cv_ats_pfe.pdf" ]; then
-            echo "❌ Erreur : cv_ats_pfe.pdf introuvable !"
+          if [ ! -f "dossier_candidature_houda_tazi.pdf" ]; then
+            echo "❌ Erreur : dossier_candidature_houda_tazi.pdf introuvable !"
             exit 1
           fi
-          echo "✅ CV ATS prêt pour l'envoi : cv_ats_pfe.pdf"
+          echo "✅ Dossier de candidature prêt : dossier_candidature_houda_tazi.pdf"
 
-      - name: 🚀 Exécution de l'Agent PFE Hunter (Multi-Canal)
+      - name: 🚀 Exécution de l'Agent Industrial Hunter
         env:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          DIGEST_RECIPIENT: ${{ secrets.DIGEST_RECIPIENT }}
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           RESEND_FROM_EMAIL: ${{ secrets.RESEND_FROM_EMAIL }}
           LINKEDIN_LI_AT: ${{ secrets.LINKEDIN_LI_AT }}
@@ -74,6 +81,11 @@ jobs:
             FLAGS="--live"
           else
             echo "🛡 Exécution en mode SIMULATION (DRY-RUN sécurisé)"
+          fi
+
+          if [ "${{ github.event.inputs.send_digest }}" != "false" ]; then
+            echo "📬 Envoi du bulletin anonyme digest activé"
+            FLAGS="$FLAGS --send-digest"
           fi
 
           if [ "${{ github.event.inputs.auto_apply }}" = "true" ] || [ "${{ secrets.AUTO_PLATFORM_APPLY }}" = "true" ] || [ "${{ secrets.AUTO_EASY_APPLY }}" = "true" ]; then

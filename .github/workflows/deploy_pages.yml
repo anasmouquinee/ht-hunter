@@ -1,4 +1,4 @@
-name: Deploy PFE Platform to GitHub Pages
+name: Deploy Industrial Platform to GitHub Pages
 
 on:
   push:
