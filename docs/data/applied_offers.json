@@ -6308,9 +6308,75 @@
       "simulated_at": null,
       "notified": true,
       "notified_at": "2026-11-25T00:20:09.895898+00:00"
+    },
+    "7bea81367b38e474": {
+      "title": "Ingénieur / Technicien Qualité FAI Aéronautique F/H",
+      "company": "HOUSE OF ABY",
+      "url": "https://ma.linkedin.com/jobs/view/ing%C3%A9nieur-technicien-qualit%C3%A9-fai-a%C3%A9ronautique-f-h-at-house-of-aby-4491393389",
+      "source": "linkedin_guest",
+      "contact_email": null,
+      "linkedin_url": "https://ma.linkedin.com/jobs/view/ing%C3%A9nieur-technicien-qualit%C3%A9-fai-a%C3%A9ronautique-f-h-at-house-of-aby-4491393389",
+      "hr_name": null,
+      "hr_linkedin_url": null,
+      "is_remunerated": null,
+      "score": 78,
+      "matched_skills": [
+        "Qualité"
+      ],
+      "first_seen": "2026-11-25T06:06:39.367993+00:00",
+      "applied": false,
+      "applied_at": null,
+      "simulated": false,
+      "simulated_at": null,
+      "notified": true,
+      "notified_at": "2026-11-25T06:06:39.367993+00:00"
+    },
+    "b527b6e8650eaad0": {
+      "title": "Ingénieur Production - Freelance ( REF03)",
+      "company": "Trusted Advisors",
+      "url": "https://ma.talent.com/view?id=629360535060749812",
+      "source": "talent",
+      "contact_email": null,
+      "linkedin_url": null,
+      "hr_name": null,
+      "hr_linkedin_url": null,
+      "is_remunerated": null,
+      "score": 75,
+      "matched_skills": [
+        "Ingénieur production"
+      ],
+      "first_seen": "2026-11-25T06:06:41.712981+00:00",
+      "applied": false,
+      "applied_at": null,
+      "simulated": false,
+      "simulated_at": null,
+      "notified": true,
+      "notified_at": "2026-11-25T06:06:41.712981+00:00"
+    },
+    "3dc440d102d52147": {
+      "title": "Responsable Planification & Pilotage (H/F) – Excellence Opérationnelle",
+      "company": "DIORH",
+      "url": "https://ma.talent.com/view?id=646463654267328832",
+      "source": "talent",
+      "contact_email": null,
+      "linkedin_url": null,
+      "hr_name": null,
+      "hr_linkedin_url": null,
+      "is_remunerated": null,
+      "score": 55,
+      "matched_skills": [
+        "Planification"
+      ],
+      "first_seen": "2026-11-25T06:06:43.937760+00:00",
+      "applied": false,
+      "applied_at": null,
+      "simulated": false,
+      "simulated_at": null,
+      "notified": true,
+      "notified_at": "2026-11-25T06:06:43.937760+00:00"
     }
   },
-  "last_updated": "2026-11-25T00:20:09.895898+00:00",
+  "last_updated": "2026-11-25T06:06:43.937760+00:00",
   "total_applied": 26,
   "total_simulated": 0
 }
