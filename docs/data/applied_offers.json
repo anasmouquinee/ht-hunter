@@ -6374,9 +6374,75 @@
       "simulated_at": null,
       "notified": true,
       "notified_at": "2026-11-25T06:06:43.937760+00:00"
+    },
+    "78bf65732a231c5c": {
+      "title": "INGENIEUR PRODUCTION CONFIRME",
+      "company": "ManpowerGroup",
+      "url": "https://ma.linkedin.com/jobs/view/ingenieur-production-confirme-at-manpowergroup-4468662300",
+      "source": "linkedin_guest",
+      "contact_email": null,
+      "linkedin_url": "https://ma.linkedin.com/jobs/view/ingenieur-production-confirme-at-manpowergroup-4468662300",
+      "hr_name": null,
+      "hr_linkedin_url": null,
+      "is_remunerated": null,
+      "score": 70,
+      "matched_skills": [
+        "Ingenieur production"
+      ],
+      "first_seen": "2026-11-25T12:07:10.583654+00:00",
+      "applied": false,
+      "applied_at": null,
+      "simulated": false,
+      "simulated_at": null,
+      "notified": true,
+      "notified_at": "2026-11-25T12:07:10.583654+00:00"
+    },
+    "ecdb67a461e8260b": {
+      "title": "Retail Merchandiser Senior Specialist Trading and Allocation",
+      "company": "adidas",
+      "url": "https://ma.linkedin.com/jobs/view/retail-merchandiser-senior-specialist-trading-and-allocation-at-adidas-4474407633",
+      "source": "linkedin_guest",
+      "contact_email": null,
+      "linkedin_url": "https://ma.linkedin.com/jobs/view/retail-merchandiser-senior-specialist-trading-and-allocation-at-adidas-4474407633",
+      "hr_name": null,
+      "hr_linkedin_url": null,
+      "is_remunerated": null,
+      "score": 55,
+      "matched_skills": [
+        "Supply chain"
+      ],
+      "first_seen": "2026-11-25T12:07:10.588406+00:00",
+      "applied": false,
+      "applied_at": null,
+      "simulated": false,
+      "simulated_at": null,
+      "notified": true,
+      "notified_at": "2026-11-25T12:07:10.588406+00:00"
+    },
+    "27a9894f27cf32f8": {
+      "title": "SEBN recrute 7 profils logistique et achats à Bouknadel",
+      "company": "SEBN",
+      "url": "https://joblia.ma/offres-emploi/sebn-recrute-7-profils-logistique-et-achats-a-bouknadel",
+      "source": "joblia",
+      "contact_email": null,
+      "linkedin_url": null,
+      "hr_name": null,
+      "hr_linkedin_url": null,
+      "is_remunerated": null,
+      "score": 70,
+      "matched_skills": [
+        "Logistique"
+      ],
+      "first_seen": "2026-11-25T12:07:17.815308+00:00",
+      "applied": false,
+      "applied_at": null,
+      "simulated": false,
+      "simulated_at": null,
+      "notified": true,
+      "notified_at": "2026-11-25T12:07:17.815308+00:00"
     }
   },
-  "last_updated": "2026-11-25T06:06:43.937760+00:00",
+  "last_updated": "2026-11-25T12:07:17.815308+00:00",
   "total_applied": 26,
   "total_simulated": 0
 }
