@@ -6648,9 +6648,75 @@
       "simulated_at": null,
       "notified": true,
       "notified_at": "2026-11-25T18:08:37.333992+00:00"
+    },
+    "9b03c8fed9ea8ac1": {
+      "title": "Responsable Qualité (F/H) - Casablanca - Français - Anglais",
+      "company": "Concentrix",
+      "url": "https://ma.linkedin.com/jobs/view/responsable-qualit%C3%A9-f-h-casablanca-fran%C3%A7ais-anglais-at-concentrix-4494683301",
+      "source": "linkedin_guest",
+      "contact_email": null,
+      "linkedin_url": "https://ma.linkedin.com/jobs/view/responsable-qualit%C3%A9-f-h-casablanca-fran%C3%A7ais-anglais-at-concentrix-4494683301",
+      "hr_name": null,
+      "hr_linkedin_url": null,
+      "is_remunerated": null,
+      "score": 75,
+      "matched_skills": [
+        "Qualité"
+      ],
+      "first_seen": "2026-11-26T00:07:58.571062+00:00",
+      "applied": false,
+      "applied_at": null,
+      "simulated": false,
+      "simulated_at": null,
+      "notified": true,
+      "notified_at": "2026-11-26T00:07:58.571062+00:00"
+    },
+    "522971a143b65fbc": {
+      "title": "Offre de stage préembauche: Assistante Commerciale",
+      "company": "Entreprise Partenaire (MarocAnnonces)",
+      "url": "https://www.marocannonces.com/categorie/309/Offres-emploi/annonce/10498234/Offre-de-stage-préembauche-Assistante-Commerciale.html",
+      "source": "marocannonces",
+      "contact_email": null,
+      "linkedin_url": null,
+      "hr_name": null,
+      "hr_linkedin_url": null,
+      "is_remunerated": true,
+      "score": 65,
+      "matched_skills": [
+        "Qualité"
+      ],
+      "first_seen": "2026-11-26T00:08:02.635533+00:00",
+      "applied": false,
+      "applied_at": null,
+      "simulated": false,
+      "simulated_at": null,
+      "notified": true,
+      "notified_at": "2026-11-26T00:08:02.635533+00:00"
+    },
+    "224398f030ea28a7": {
+      "title": "Chargé de Recouvrement (français/espagnol) - H/F",
+      "company": "Groupe BBL",
+      "url": "https://ma.talent.com/view?id=629358013471136971",
+      "source": "talent",
+      "contact_email": null,
+      "linkedin_url": null,
+      "hr_name": null,
+      "hr_linkedin_url": null,
+      "is_remunerated": null,
+      "score": 55,
+      "matched_skills": [
+        "Amélioration continue"
+      ],
+      "first_seen": "2026-11-26T00:08:04.971517+00:00",
+      "applied": false,
+      "applied_at": null,
+      "simulated": false,
+      "simulated_at": null,
+      "notified": true,
+      "notified_at": "2026-11-26T00:08:04.971517+00:00"
     }
   },
-  "last_updated": "2026-11-25T18:08:37.333992+00:00",
+  "last_updated": "2026-11-26T00:08:04.971517+00:00",
   "total_applied": 26,
   "total_simulated": 0
 }
