@@ -6850,9 +6850,124 @@
       "simulated_at": null,
       "notified": true,
       "notified_at": "2026-11-26T12:07:09.555340+00:00"
+    },
+    "22460d20c961c06a": {
+      "title": "National Air Logistics Operations Optimization Expert (m/f/d)",
+      "company": "Kuehne+Nagel",
+      "url": "https://ma.linkedin.com/jobs/view/national-air-logistics-operations-optimization-expert-m-f-d-at-kuehne%2Bnagel-4495539151",
+      "source": "linkedin_guest",
+      "contact_email": null,
+      "linkedin_url": "https://ma.linkedin.com/jobs/view/national-air-logistics-operations-optimization-expert-m-f-d-at-kuehne%2Bnagel-4495539151",
+      "hr_name": null,
+      "hr_linkedin_url": null,
+      "is_remunerated": true,
+      "score": 80,
+      "matched_skills": [
+        "Amélioration continue",
+        "Supply chain",
+        "Logistique",
+        "Qualité"
+      ],
+      "first_seen": "2026-11-26T18:08:24.992243+00:00",
+      "applied": false,
+      "applied_at": null,
+      "simulated": false,
+      "simulated_at": null,
+      "notified": true,
+      "notified_at": "2026-11-26T18:08:24.992243+00:00"
+    },
+    "97e8e6e34b3f0335": {
+      "title": "Responsable Qualité (F/H) - Casablanca - Français - Anglais",
+      "company": "Concentrix",
+      "url": "https://ma.linkedin.com/jobs/view/responsable-qualit%C3%A9-f-h-casablanca-fran%C3%A7ais-anglais-at-concentrix-4495541255",
+      "source": "linkedin_guest",
+      "contact_email": null,
+      "linkedin_url": "https://ma.linkedin.com/jobs/view/responsable-qualit%C3%A9-f-h-casablanca-fran%C3%A7ais-anglais-at-concentrix-4495541255",
+      "hr_name": null,
+      "hr_linkedin_url": null,
+      "is_remunerated": null,
+      "score": 75,
+      "matched_skills": [
+        "Qualité"
+      ],
+      "first_seen": "2026-11-26T18:08:24.998998+00:00",
+      "applied": false,
+      "applied_at": null,
+      "simulated": false,
+      "simulated_at": null,
+      "notified": true,
+      "notified_at": "2026-11-26T18:08:24.998998+00:00"
+    },
+    "c1ca819ea4672454": {
+      "title": "Responsable Supply Chain FMCG",
+      "company": "Confidentiel",
+      "url": "https://ma.linkedin.com/jobs/view/responsable-supply-chain-fmcg-at-confidentiel-4495509343",
+      "source": "linkedin_guest",
+      "contact_email": null,
+      "linkedin_url": "https://ma.linkedin.com/jobs/view/responsable-supply-chain-fmcg-at-confidentiel-4495509343",
+      "hr_name": null,
+      "hr_linkedin_url": null,
+      "is_remunerated": null,
+      "score": 70,
+      "matched_skills": [
+        "Supply chain"
+      ],
+      "first_seen": "2026-11-26T18:08:25.005341+00:00",
+      "applied": false,
+      "applied_at": null,
+      "simulated": false,
+      "simulated_at": null,
+      "notified": true,
+      "notified_at": "2026-11-26T18:08:25.005341+00:00"
+    },
+    "ab71ecee71734b27": {
+      "title": "Ingénieur(e) Méthode & Industrialisation",
+      "company": "Safran",
+      "url": "https://ma.linkedin.com/jobs/view/ing%C3%A9nieur-e-m%C3%A9thode-industrialisation-at-safran-4495532484",
+      "source": "linkedin_guest",
+      "contact_email": null,
+      "linkedin_url": "https://ma.linkedin.com/jobs/view/ing%C3%A9nieur-e-m%C3%A9thode-industrialisation-at-safran-4495532484",
+      "hr_name": null,
+      "hr_linkedin_url": null,
+      "is_remunerated": null,
+      "score": 55,
+      "matched_skills": [
+        "Industrialisation"
+      ],
+      "first_seen": "2026-11-26T18:08:25.011851+00:00",
+      "applied": false,
+      "applied_at": null,
+      "simulated": false,
+      "simulated_at": null,
+      "notified": true,
+      "notified_at": "2026-11-26T18:08:25.011851+00:00"
+    },
+    "4a44b418f072accf": {
+      "title": "Senior Supply Chain Engineer",
+      "company": "Kronospan",
+      "url": "https://ma.linkedin.com/jobs/view/senior-supply-chain-engineer-at-kronospan-4485752781",
+      "source": "linkedin_guest",
+      "contact_email": null,
+      "linkedin_url": "https://ma.linkedin.com/jobs/view/senior-supply-chain-engineer-at-kronospan-4485752781",
+      "hr_name": null,
+      "hr_linkedin_url": null,
+      "is_remunerated": null,
+      "score": 85,
+      "matched_skills": [
+        "Continuous improvement",
+        "Supply chain",
+        "Erp"
+      ],
+      "first_seen": "2026-11-26T18:08:25.018197+00:00",
+      "applied": false,
+      "applied_at": null,
+      "simulated": false,
+      "simulated_at": null,
+      "notified": true,
+      "notified_at": "2026-11-26T18:08:25.018197+00:00"
     }
   },
-  "last_updated": "2026-11-26T12:07:09.555340+00:00",
+  "last_updated": "2026-11-26T18:08:25.018197+00:00",
   "total_applied": 26,
   "total_simulated": 0
 }
