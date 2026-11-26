@@ -6736,9 +6736,123 @@
       "simulated_at": null,
       "notified": true,
       "notified_at": "2026-11-26T06:12:45.466176+00:00"
+    },
+    "ca4a29cd8d6a1ab0": {
+      "title": "Responsable Qualité (F/H) - Casablanca - Français - Anglais",
+      "company": "Concentrix",
+      "url": "https://ma.linkedin.com/jobs/view/responsable-qualit%C3%A9-f-h-casablanca-fran%C3%A7ais-anglais-at-concentrix-4495277905",
+      "source": "linkedin_guest",
+      "contact_email": null,
+      "linkedin_url": "https://ma.linkedin.com/jobs/view/responsable-qualit%C3%A9-f-h-casablanca-fran%C3%A7ais-anglais-at-concentrix-4495277905",
+      "hr_name": null,
+      "hr_linkedin_url": null,
+      "is_remunerated": null,
+      "score": 85,
+      "matched_skills": [
+        "Amélioration continue",
+        "Qualité",
+        "Résolution de problèmes"
+      ],
+      "first_seen": "2026-11-26T12:06:29.316693+00:00",
+      "applied": false,
+      "applied_at": null,
+      "simulated": false,
+      "simulated_at": null,
+      "notified": true,
+      "notified_at": "2026-11-26T12:06:29.316693+00:00"
+    },
+    "b660ab312469ff31": {
+      "title": "Responsable Excellence Opérationnelle, Qualité et Transformation Organisationnelle H/F",
+      "company": "TalentMind",
+      "url": "https://ma.linkedin.com/jobs/view/responsable-excellence-op%C3%A9rationnelle-qualit%C3%A9-et-transformation-organisationnelle-h-f-at-talentmind-4495282550",
+      "source": "linkedin_guest",
+      "contact_email": null,
+      "linkedin_url": "https://ma.linkedin.com/jobs/view/responsable-excellence-op%C3%A9rationnelle-qualit%C3%A9-et-transformation-organisationnelle-h-f-at-talentmind-4495282550",
+      "hr_name": null,
+      "hr_linkedin_url": null,
+      "is_remunerated": null,
+      "score": 70,
+      "matched_skills": [
+        "Qualité"
+      ],
+      "first_seen": "2026-11-26T12:06:29.321434+00:00",
+      "applied": false,
+      "applied_at": null,
+      "simulated": false,
+      "simulated_at": null,
+      "notified": true,
+      "notified_at": "2026-11-26T12:06:29.321434+00:00"
+    },
+    "44011c111828ee13": {
+      "title": "Senior Brand Manager Innovation Beyond the Core Maroc",
+      "company": "Groupe Bel",
+      "url": "https://www.rekrute.com/offre-emploi-senior-brand-manager-innovation-beyond-the-core-maroc-recrutement-groupe-bel-maroc-188930.html",
+      "source": "rekrute",
+      "contact_email": null,
+      "linkedin_url": null,
+      "hr_name": null,
+      "hr_linkedin_url": null,
+      "is_remunerated": null,
+      "score": 55,
+      "matched_skills": [
+        "Supply chain"
+      ],
+      "first_seen": "2026-11-26T12:07:07.087963+00:00",
+      "applied": false,
+      "applied_at": null,
+      "simulated": false,
+      "simulated_at": null,
+      "notified": true,
+      "notified_at": "2026-11-26T12:07:07.087963+00:00"
+    },
+    "c9fe680db0324839": {
+      "title": "Ingénieur fiabilité/Ingénieure fiabilité",
+      "company": "Maghreb Steel",
+      "url": "https://ma.linkedin.com/jobs/view/ing%C3%A9nieur-fiabilit%C3%A9-ing%C3%A9nieure-fiabilit%C3%A9-at-maghreb-steel-4492459105",
+      "source": "linkedin_guest",
+      "contact_email": null,
+      "linkedin_url": "https://ma.linkedin.com/jobs/view/ing%C3%A9nieur-fiabilit%C3%A9-ing%C3%A9nieure-fiabilit%C3%A9-at-maghreb-steel-4492459105",
+      "hr_name": null,
+      "hr_linkedin_url": null,
+      "is_remunerated": null,
+      "score": 73,
+      "matched_skills": [
+        "Amélioration continue",
+        "Qualité",
+        "Amdec"
+      ],
+      "first_seen": "2026-11-26T12:07:07.092751+00:00",
+      "applied": false,
+      "applied_at": null,
+      "simulated": false,
+      "simulated_at": null,
+      "notified": true,
+      "notified_at": "2026-11-26T12:07:07.092751+00:00"
+    },
+    "416871c546695f8c": {
+      "title": "Responsable Qualite",
+      "company": "MaroCadres",
+      "url": "https://ma.talent.com/view?id=620158731026047951",
+      "source": "talent",
+      "contact_email": null,
+      "linkedin_url": null,
+      "hr_name": null,
+      "hr_linkedin_url": null,
+      "is_remunerated": null,
+      "score": 55,
+      "matched_skills": [
+        "Qualite"
+      ],
+      "first_seen": "2026-11-26T12:07:09.555340+00:00",
+      "applied": false,
+      "applied_at": null,
+      "simulated": false,
+      "simulated_at": null,
+      "notified": true,
+      "notified_at": "2026-11-26T12:07:09.555340+00:00"
     }
   },
-  "last_updated": "2026-11-26T06:12:45.466176+00:00",
+  "last_updated": "2026-11-26T12:07:09.555340+00:00",
   "total_applied": 26,
   "total_simulated": 0
 }
