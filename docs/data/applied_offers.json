@@ -6714,9 +6714,31 @@
       "simulated_at": null,
       "notified": true,
       "notified_at": "2026-11-26T00:08:04.971517+00:00"
+    },
+    "e195231fd7cf3f6c": {
+      "title": "Responsable Qualité (F/H) - Casablanca - Français - Anglais",
+      "company": "Concentrix",
+      "url": "https://ma.linkedin.com/jobs/view/responsable-qualit%C3%A9-f-h-casablanca-fran%C3%A7ais-anglais-at-concentrix-4495257691",
+      "source": "linkedin_guest",
+      "contact_email": null,
+      "linkedin_url": "https://ma.linkedin.com/jobs/view/responsable-qualit%C3%A9-f-h-casablanca-fran%C3%A7ais-anglais-at-concentrix-4495257691",
+      "hr_name": null,
+      "hr_linkedin_url": null,
+      "is_remunerated": null,
+      "score": 75,
+      "matched_skills": [
+        "Qualité"
+      ],
+      "first_seen": "2026-11-26T06:12:45.466176+00:00",
+      "applied": false,
+      "applied_at": null,
+      "simulated": false,
+      "simulated_at": null,
+      "notified": true,
+      "notified_at": "2026-11-26T06:12:45.466176+00:00"
     }
   },
-  "last_updated": "2026-11-26T00:08:04.971517+00:00",
+  "last_updated": "2026-11-26T06:12:45.466176+00:00",
   "total_applied": 26,
   "total_simulated": 0
 }
