@@ -448,6 +448,51 @@ def run_agent(
             simulated=config.dry_run,
         )
 
+    # 4b. Dispatch pending unapplied offers in database (e.g. seeded or queued offers with contact_email)
+    if not config.dry_run and emails_sent_count < config.max_emails_per_run:
+        processed_ids = {o.id for o in qualified_offers}
+        for off_id, o_data in list(state_manager.data.get("offers", {}).items()):
+            if emails_sent_count >= config.max_emails_per_run:
+                break
+            if off_id in processed_ids or o_data.get("applied"):
+                continue
+            contact_email = o_data.get("contact_email")
+            if not contact_email:
+                continue
+
+            pending_offer = JobOffer(
+                id=off_id,
+                title=o_data.get("title", ""),
+                company=o_data.get("company", ""),
+                location=o_data.get("location", "Casablanca, Maroc"),
+                url=o_data.get("url", ""),
+                source=o_data.get("source", "saved"),
+                description=o_data.get("description", o_data.get("title", "")),
+                contact_email=contact_email,
+                linkedin_url=o_data.get("linkedin_url"),
+                hr_name=o_data.get("hr_name"),
+                hr_linkedin_url=o_data.get("hr_linkedin_url"),
+                is_remunerated=o_data.get("is_remunerated", True),
+                score=o_data.get("score", 0),
+                matched_skills=o_data.get("matched_skills", []),
+            )
+            evaluated_pending = evaluator.evaluate(pending_offer)
+            if not (evaluator.is_industrial_offer(evaluated_pending) and evaluator.is_contract_match(evaluated_pending)):
+                continue
+
+            print(f"\n📨 RELANCE OFFRE EN ATTENTE : {evaluated_pending.title} @ {evaluated_pending.company} -> {contact_email}")
+            if mailer.send_application(evaluated_pending):
+                emails_sent_count += 1
+                status_msg = f"✅ Candidature envoyée avec CV au RH : <code>{contact_email}</code>"
+                telegram.send_alert(evaluated_pending, email_sent=True, status_override=status_msg)
+                discord.send_alert(evaluated_pending, email_sent=True, status_override=status_msg)
+                state_manager.record_offer(
+                    evaluated_pending,
+                    applied=True,
+                    notified=True,
+                    simulated=False,
+                )
+
     # 5. Anonymous Career Digest
     if config.digest_enabled:
         print("\n📫 Préparation du bulletin anonyme d'offres d'emploi pour Houda Tazi...")

@@ -55,7 +55,7 @@ class EmailSender:
                 b64_content = base64.b64encode(f.read()).decode("utf-8")
                 cand_slug = config.candidate.full_name.replace(" ", "_")
                 attachments.append({
-                    "filename": f"CV_{cand_slug}_PFE.pdf",
+                    "filename": f"CV_{cand_slug}_Genie_Industriel.pdf",
                     "content": b64_content,
                 })
         else:
@@ -130,7 +130,7 @@ class EmailSender:
                     part.add_header(
                         "Content-Disposition",
                         "attachment",
-                        filename=f"CV_{cand_slug}_PFE.pdf",
+                        filename=f"CV_{cand_slug}_Genie_Industriel.pdf",
                     )
                     msg.attach(part)
             else:

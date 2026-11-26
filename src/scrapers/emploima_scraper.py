@@ -12,10 +12,10 @@ class EmploiMaScraper(BaseScraper):
     name: str = "emploima"
     BASE_URL = "https://www.emploi.ma"
 
-    def scrape(self, keyword: str = "pfe", location: str = "Casablanca") -> List[JobOffer]:
+    def scrape(self, keyword: str = "genie industriel", location: str = "Casablanca") -> List[JobOffer]:
         offers: List[JobOffer] = []
         search_query = quote_plus(keyword)
-        url = f"{self.BASE_URL}/recherche-jobs-maroc?keyword={search_query}&f%5B0%5D=im_field_offre_contrat%3Astage"
+        url = f"{self.BASE_URL}/recherche-jobs-maroc?keyword={search_query}"
 
         try:
             response = self.session.get(url, timeout=self.timeout)

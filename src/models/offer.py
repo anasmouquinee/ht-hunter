@@ -39,15 +39,15 @@ class JobOffer(BaseModel):
         if not self.linkedin_url and "linkedin.com" in self.url:
             self.linkedin_url = normalized_url or self.url.split("?")[0]
 
-            # Auto-extract email from description if not already provided
-            if not self.contact_email:
-                emails = extract_emails(self.description)
-                if emails:
-                    self.contact_email = emails[0]
+        # Auto-extract email from description if not already provided
+        if not self.contact_email:
+            emails = extract_emails(self.description)
+            if emails:
+                self.contact_email = emails[0]
 
-            # Auto-extract direct recruiter/HR LinkedIn profile (/in/...)
-            if not self.hr_linkedin_url:
-                self.hr_linkedin_url = extract_recruiter_profile(self.description)
+        # Auto-extract direct recruiter/HR LinkedIn profile (/in/...)
+        if not self.hr_linkedin_url:
+            self.hr_linkedin_url = extract_recruiter_profile(self.description)
 
         # Fallback: resolve verified company talent inbox if still missing email
         if not self.contact_email:

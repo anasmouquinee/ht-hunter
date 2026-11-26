@@ -110,9 +110,16 @@ class ReKruteScraper(BaseScraper):
             linkedin_urls = extract_linkedin_urls(snippet)
             linkedin_url = linkedin_urls[0] if linkedin_urls else None
 
-            # If tech/PFE relevant and no email in snippet, fetch detail page
+            # If industrial/engineering relevant and no email in snippet, fetch detail page
             full_desc = snippet
-            if not contact_email and any(kw in title.lower() for kw in ("pfe", "stage", "data", "ia", "dev", "engineer")):
+            detail_keywords = (
+                "industriel", "production", "qualité", "qualite", "logistique",
+                "supply", "méthode", "methode", "lean", "process", "amélioration",
+                "amelioration", "planification", "ordonnancement", "ingénieur",
+                "ingenieur", "responsable", "maintenance", "achat", "stock",
+                "engineer", "industrial",
+            )
+            if not contact_email and any(kw in title.lower() for kw in detail_keywords):
                 detail_text = self._fetch_offer_detail(url)
                 if detail_text:
                     full_desc = f"{snippet} -- {detail_text}"
