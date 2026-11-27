@@ -469,10 +469,8 @@
     "1f7eb5d0b887": {
       "title": "Ingénieur Supply Chain & Gestion des Stocks ERP (CDI)",
       "company": "Dislog Group",
-      "location": "Casablanca, Maroc",
       "url": "https://www.rekrute.com/offre-emploi-ingenieur-supply-chain-dislog-group.html",
       "source": "rekrute",
-      "description": "Dislog Group recrute un Ingénieur Supply Chain en CDI. Missions : pilotage des flux logistiques et approvisionnements sur les plateformes nationales, modélisation des niveaux de stocks sous ERP, optimisation des coûts d'entreposage et de distribution.",
       "contact_email": "recrutement@disloggroup.com",
       "linkedin_url": null,
       "hr_name": null,
@@ -489,20 +487,18 @@
         "Erp"
       ],
       "first_seen": "2026-11-24T01:02:57.571674+00:00",
-      "applied": false,
-      "applied_at": null,
+      "applied": true,
+      "applied_at": "2026-11-27T00:07:57.822615+00:00",
       "simulated": false,
       "simulated_at": null,
-      "notified": false,
-      "notified_at": null
+      "notified": true,
+      "notified_at": "2026-11-27T00:07:57.822615+00:00"
     },
     "9321dcec4980": {
       "title": "Ingénieur Méthodes & Fiabilité Industrielle (CDI Débutant)",
       "company": "Maghreb Steel",
-      "location": "Tit Mellil, Casablanca, Maroc",
       "url": "https://www.emploi.ma/offre-emploi-maghreb-steel-ingenieur-methodes-tit-mellil",
       "source": "emploima",
-      "description": "Maghreb Steel recrute un Ingénieur Méthodes & Fiabilité en CDI pour son complexe sidérurgique de Tit Mellil. Missions : fiabilisation des installations de laminage à chaud et à froid, planification des arrêts de maintenance, déploiement des chantiers 5S et TPM, optimisation des flux matières.",
       "contact_email": "recrutement@maghrebsteel.ma",
       "linkedin_url": null,
       "hr_name": null,
@@ -517,12 +513,12 @@
         "Optimisation des flux"
       ],
       "first_seen": "2026-11-24T01:02:57.571674+00:00",
-      "applied": false,
-      "applied_at": null,
+      "applied": true,
+      "applied_at": "2026-11-27T00:08:02.203377+00:00",
       "simulated": false,
       "simulated_at": null,
-      "notified": false,
-      "notified_at": null
+      "notified": true,
+      "notified_at": "2026-11-27T00:08:02.203377+00:00"
     },
     "8d57b64eddd23d1b": {
       "title": "Head of Supply Chain - Africa",
@@ -3262,21 +3258,18 @@
       "hr_name": null,
       "hr_linkedin_url": null,
       "is_remunerated": null,
-      "score": 100,
+      "score": 75,
       "matched_skills": [
-        "Amélioration continue",
         "Supply chain",
-        "Logistique",
-        "Planification",
-        "Optimisation des flux"
+        "Logistique"
       ],
       "first_seen": "2026-11-25T00:17:00.480462+00:00",
-      "applied": false,
-      "applied_at": null,
+      "applied": true,
+      "applied_at": "2026-11-27T00:08:07.446492+00:00",
       "simulated": false,
       "simulated_at": null,
       "notified": true,
-      "notified_at": "2026-11-25T00:17:00.480462+00:00"
+      "notified_at": "2026-11-27T00:08:07.446492+00:00"
     },
     "cd8d639ee5edfad9": {
       "title": "Hirschmann Automotive recrute des Ingénieurs Qualité",
@@ -3317,22 +3310,17 @@
       "hr_name": null,
       "hr_linkedin_url": null,
       "is_remunerated": null,
-      "score": 100,
+      "score": 78,
       "matched_skills": [
-        "Génie industriel",
-        "5s",
-        "Approvisionnement",
-        "Qualité",
-        "Iso 9001",
-        "Qrqc"
+        "Qualité"
       ],
       "first_seen": "2026-11-25T00:17:02.863786+00:00",
-      "applied": false,
-      "applied_at": null,
+      "applied": true,
+      "applied_at": "2026-11-27T00:08:12.712382+00:00",
       "simulated": false,
       "simulated_at": null,
       "notified": true,
-      "notified_at": "2026-11-25T00:17:02.863786+00:00"
+      "notified_at": "2026-11-27T00:08:12.712382+00:00"
     },
     "33555f2b36de0aed": {
       "title": "5 postes à saisir chez Ingelec en CDI et en stage",
@@ -3426,20 +3414,17 @@
       "hr_name": null,
       "hr_linkedin_url": null,
       "is_remunerated": null,
-      "score": 98,
+      "score": 70,
       "matched_skills": [
-        "Amélioration continue",
-        "Supply chain",
-        "Planification",
-        "Résolution de problèmes"
+        "Supply chain"
       ],
       "first_seen": "2026-11-25T00:17:05.280097+00:00",
-      "applied": false,
-      "applied_at": null,
+      "applied": true,
+      "applied_at": "2026-11-27T00:08:17.773317+00:00",
       "simulated": false,
       "simulated_at": null,
       "notified": true,
-      "notified_at": "2026-11-25T00:17:05.280097+00:00"
+      "notified_at": "2026-11-27T00:08:17.773317+00:00"
     },
     "46e7e4af1b7014f5": {
       "title": "SEGULA Technologies recrute des Ingénieurs Mécaniques et Industriels Débutants",
@@ -3474,18 +3459,17 @@
       "hr_name": null,
       "hr_linkedin_url": null,
       "is_remunerated": null,
-      "score": 96,
+      "score": 78,
       "matched_skills": [
-        "Ingénieur production",
-        "Qualité"
+        "Ingénieur production"
       ],
       "first_seen": "2026-11-25T00:17:05.284688+00:00",
-      "applied": false,
-      "applied_at": null,
+      "applied": true,
+      "applied_at": "2026-11-27T00:08:23.098250+00:00",
       "simulated": false,
       "simulated_at": null,
       "notified": true,
-      "notified_at": "2026-11-25T00:17:05.284688+00:00"
+      "notified_at": "2026-11-27T00:08:23.098250+00:00"
     },
     "656250a764569ea9": {
       "title": "Ingénieurs juniors recherchés, opportunité à saisir chez Forvia",
@@ -3599,19 +3583,17 @@
       "hr_name": null,
       "hr_linkedin_url": null,
       "is_remunerated": null,
-      "score": 93,
+      "score": 70,
       "matched_skills": [
-        "Ingénieur méthodes",
-        "Amélioration continue",
         "Qualité"
       ],
       "first_seen": "2026-11-25T00:17:07.526289+00:00",
-      "applied": false,
-      "applied_at": null,
+      "applied": true,
+      "applied_at": "2026-11-27T00:08:28.303228+00:00",
       "simulated": false,
       "simulated_at": null,
       "notified": true,
-      "notified_at": "2026-11-25T00:17:07.526289+00:00"
+      "notified_at": "2026-11-27T00:08:28.303228+00:00"
     },
     "b1541b61c3db8577": {
       "title": "Renault Group lance son Graduate Program pour les jeunes ingénieurs à Casablanca et Tanger",
@@ -3674,19 +3656,17 @@
       "hr_name": null,
       "hr_linkedin_url": null,
       "is_remunerated": null,
-      "score": 93,
+      "score": 75,
       "matched_skills": [
-        "Génie industriel",
-        "Supply chain",
-        "Logistique"
+        "Supply chain"
       ],
       "first_seen": "2026-11-25T00:17:10.632299+00:00",
-      "applied": false,
-      "applied_at": null,
+      "applied": true,
+      "applied_at": "2026-11-27T00:08:33.524021+00:00",
       "simulated": false,
       "simulated_at": null,
       "notified": true,
-      "notified_at": "2026-11-25T00:17:10.632299+00:00"
+      "notified_at": "2026-11-27T00:08:33.524021+00:00"
     },
     "7f9297e0e9d39887": {
       "title": "Sews Maroc recrute des Ingénieurs Qualité",
@@ -3698,19 +3678,17 @@
       "hr_name": null,
       "hr_linkedin_url": null,
       "is_remunerated": null,
-      "score": 93,
+      "score": 78,
       "matched_skills": [
-        "Amélioration continue",
-        "Qualité",
-        "Assurance qualité"
+        "Qualité"
       ],
       "first_seen": "2026-11-25T00:17:10.634807+00:00",
-      "applied": false,
-      "applied_at": null,
+      "applied": true,
+      "applied_at": "2026-11-27T00:08:38.809348+00:00",
       "simulated": false,
       "simulated_at": null,
       "notified": true,
-      "notified_at": "2026-11-25T00:17:10.634807+00:00"
+      "notified_at": "2026-11-27T00:08:38.809348+00:00"
     },
     "b4588239cb41c8ce": {
       "title": "Orhan Automotive lance une campagne de recrutement de stagiaires à Tanger",
@@ -3776,19 +3754,17 @@
       "hr_name": null,
       "hr_linkedin_url": null,
       "is_remunerated": null,
-      "score": 93,
+      "score": 75,
       "matched_skills": [
-        "Amélioration continue",
-        "Logistique",
-        "Gestion des stocks"
+        "Logistique"
       ],
       "first_seen": "2026-11-25T00:17:10.642282+00:00",
-      "applied": false,
-      "applied_at": null,
+      "applied": true,
+      "applied_at": "2026-11-27T00:08:43.917870+00:00",
       "simulated": false,
       "simulated_at": null,
       "notified": true,
-      "notified_at": "2026-11-25T00:17:10.642282+00:00"
+      "notified_at": "2026-11-27T00:08:43.917870+00:00"
     },
     "0b4c4168db896dc8": {
       "title": "Ingénieurs, commerciaux, responsables maintenance… plusieurs postes ouverts chez Sonasid",
@@ -3845,18 +3821,17 @@
       "hr_name": null,
       "hr_linkedin_url": null,
       "is_remunerated": null,
-      "score": 91,
+      "score": 78,
       "matched_skills": [
-        "Génie industriel",
         "Qualité"
       ],
       "first_seen": "2026-11-25T00:17:13.078698+00:00",
-      "applied": false,
-      "applied_at": null,
+      "applied": true,
+      "applied_at": "2026-11-27T00:08:49.196335+00:00",
       "simulated": false,
       "simulated_at": null,
       "notified": true,
-      "notified_at": "2026-11-25T00:17:13.078698+00:00"
+      "notified_at": "2026-11-27T00:08:49.196335+00:00"
     },
     "f0d55cc7d0e246eb": {
       "title": "Novatec recrute des Ingénieurs Qualité",
@@ -3868,17 +3843,17 @@
       "hr_name": null,
       "hr_linkedin_url": null,
       "is_remunerated": null,
-      "score": 91,
+      "score": 70,
       "matched_skills": [
         "Qualité"
       ],
       "first_seen": "2026-11-25T00:17:13.081287+00:00",
-      "applied": false,
-      "applied_at": null,
+      "applied": true,
+      "applied_at": "2026-11-27T00:08:54.445616+00:00",
       "simulated": false,
       "simulated_at": null,
       "notified": true,
-      "notified_at": "2026-11-25T00:17:13.081287+00:00"
+      "notified_at": "2026-11-27T00:08:54.445616+00:00"
     },
     "516d03d7240e2007": {
       "title": "Expleo Group recrute des Techniciens et Ingénieurs Juniors",
@@ -3940,20 +3915,17 @@
       "hr_name": null,
       "hr_linkedin_url": null,
       "is_remunerated": null,
-      "score": 90,
+      "score": 70,
       "matched_skills": [
-        "Génie industriel",
-        "Ingénieur industriel",
-        "Amélioration continue",
-        "Planification"
+        "Ingénieur industriel"
       ],
       "first_seen": "2026-11-25T00:17:18.266248+00:00",
-      "applied": false,
-      "applied_at": null,
+      "applied": true,
+      "applied_at": "2026-11-27T00:08:58.628887+00:00",
       "simulated": false,
       "simulated_at": null,
       "notified": true,
-      "notified_at": "2026-11-25T00:17:18.266248+00:00"
+      "notified_at": "2026-11-27T00:08:58.628887+00:00"
     },
     "08ce31d1c3dc83f2": {
       "title": "Ingénieurs CVC, électricité, méthodes, QHSE: des opportunités à saisir chez Ventec",
@@ -4492,18 +4464,17 @@
       "hr_name": null,
       "hr_linkedin_url": null,
       "is_remunerated": null,
-      "score": 83,
+      "score": 78,
       "matched_skills": [
-        "Amélioration continue",
         "Qualité"
       ],
       "first_seen": "2026-11-25T00:17:39.420331+00:00",
-      "applied": false,
-      "applied_at": null,
+      "applied": true,
+      "applied_at": "2026-11-27T00:09:03.779461+00:00",
       "simulated": false,
       "simulated_at": null,
       "notified": true,
-      "notified_at": "2026-11-25T00:17:39.420331+00:00"
+      "notified_at": "2026-11-27T00:09:03.779461+00:00"
     },
     "6b06fa6578ba67bb": {
       "title": "TE Connectivity recrute des Ingénieurs Qualité",
@@ -4537,17 +4508,17 @@
       "hr_name": null,
       "hr_linkedin_url": null,
       "is_remunerated": null,
-      "score": 83,
+      "score": 70,
       "matched_skills": [
         "Qualité"
       ],
       "first_seen": "2026-11-25T00:17:41.694851+00:00",
-      "applied": false,
-      "applied_at": null,
+      "applied": true,
+      "applied_at": "2026-11-27T00:09:08.944324+00:00",
       "simulated": false,
       "simulated_at": null,
       "notified": true,
-      "notified_at": "2026-11-25T00:17:41.694851+00:00"
+      "notified_at": "2026-11-27T00:09:08.944324+00:00"
     },
     "5709d7848c98e616": {
       "title": "Kromberg & Schubert recrute des Ingénieurs Qualité",
@@ -4559,17 +4530,17 @@
       "hr_name": null,
       "hr_linkedin_url": null,
       "is_remunerated": null,
-      "score": 83,
+      "score": 70,
       "matched_skills": [
         "Qualité"
       ],
       "first_seen": "2026-11-25T00:17:41.697901+00:00",
-      "applied": false,
-      "applied_at": null,
+      "applied": true,
+      "applied_at": "2026-11-27T00:09:13.293174+00:00",
       "simulated": false,
       "simulated_at": null,
       "notified": true,
-      "notified_at": "2026-11-25T00:17:41.697901+00:00"
+      "notified_at": "2026-11-27T00:09:13.293174+00:00"
     },
     "64b6eaacd829a946": {
       "title": "Aptiv recrute des Ingénieurs Qualité",
@@ -5483,12 +5454,12 @@
         "Supply chain"
       ],
       "first_seen": "2026-11-25T00:18:56.348972+00:00",
-      "applied": false,
-      "applied_at": null,
+      "applied": true,
+      "applied_at": "2026-11-27T00:09:17.698904+00:00",
       "simulated": false,
       "simulated_at": null,
       "notified": true,
-      "notified_at": "2026-11-25T00:18:56.348972+00:00"
+      "notified_at": "2026-11-27T00:09:17.698904+00:00"
     },
     "c3fd079d39683aa4": {
       "title": "Offres d’Emploi chez Comeca Group: Supply Chain et Finance",
@@ -6978,7 +6949,7 @@
       "notified_at": "2026-11-26T21:52:27.115463+00:00"
     }
   },
-  "last_updated": "2026-11-26T21:53:19.856506+00:00",
-  "total_applied": 46,
+  "last_updated": "2026-11-27T00:09:17.698904+00:00",
+  "total_applied": 63,
   "total_simulated": 0
 }
