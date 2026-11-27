@@ -6860,7 +6860,7 @@
       "company": "Safran",
       "url": "https://ma.linkedin.com/jobs/view/ing%C3%A9nieur-e-m%C3%A9thode-industrialisation-at-safran-4495532484",
       "source": "linkedin_guest",
-      "contact_email": null,
+      "contact_email": "recrutement.maroc@safrangroup.com",
       "linkedin_url": "https://ma.linkedin.com/jobs/view/ing%C3%A9nieur-e-m%C3%A9thode-industrialisation-at-safran-4495532484",
       "hr_name": null,
       "hr_linkedin_url": null,
@@ -6870,12 +6870,12 @@
         "Industrialisation"
       ],
       "first_seen": "2026-11-26T18:08:25.011851+00:00",
-      "applied": false,
-      "applied_at": null,
+      "applied": true,
+      "applied_at": "2026-11-27T12:07:10.595427+00:00",
       "simulated": false,
       "simulated_at": null,
       "notified": true,
-      "notified_at": "2026-11-26T18:08:25.011851+00:00"
+      "notified_at": "2026-11-27T12:07:10.595427+00:00"
     },
     "4a44b418f072accf": {
       "title": "Senior Supply Chain Engineer",
@@ -6991,9 +6991,123 @@
       "simulated_at": null,
       "notified": true,
       "notified_at": "2026-11-27T06:07:06.333626+00:00"
+    },
+    "3a71823bb4ece05b": {
+      "title": "Ingénieur Exploitation Réseau Senior – NOC (H/F)",
+      "company": "CGI Technologies et Solutions Maroc",
+      "url": "https://www.rekrute.com/offre-emploi-ingenieur-exploitation-reseau-senior-noc-hf-recrutement-cgi-technologies-et-solutions-maroc-casablancarabatfes-189008.html",
+      "source": "rekrute",
+      "contact_email": "carrieres.maroc@cgi.com",
+      "linkedin_url": null,
+      "hr_name": null,
+      "hr_linkedin_url": null,
+      "is_remunerated": true,
+      "score": 60,
+      "matched_skills": [
+        "Ingénieur exploitation"
+      ],
+      "first_seen": "2026-11-27T12:07:00.184281+00:00",
+      "applied": true,
+      "applied_at": "2026-11-27T12:07:00.184281+00:00",
+      "simulated": false,
+      "simulated_at": null,
+      "notified": true,
+      "notified_at": "2026-11-27T12:07:00.184281+00:00"
+    },
+    "d24325493fdd91b8": {
+      "title": "Nomenclature Ordonnancement Approvisionnement",
+      "company": "ALTEN Maroc",
+      "url": "https://www.rekrute.com/offre-emploi-nomenclature-ordonnancement-approvisionnement-recrutement-alten-maroc-rabat-188972.html",
+      "source": "rekrute",
+      "contact_email": "recrutement.kenitra@stellantis.com",
+      "linkedin_url": null,
+      "hr_name": null,
+      "hr_linkedin_url": null,
+      "is_remunerated": null,
+      "score": 96,
+      "matched_skills": [
+        "Supply chain",
+        "Logistique",
+        "Approvisionnement",
+        "Approvisionnements",
+        "Ordonnancement"
+      ],
+      "first_seen": "2026-11-27T12:07:05.372655+00:00",
+      "applied": true,
+      "applied_at": "2026-11-27T12:07:05.372655+00:00",
+      "simulated": false,
+      "simulated_at": null,
+      "notified": true,
+      "notified_at": "2026-11-27T12:07:05.372655+00:00"
+    },
+    "1174d2dcdf75797b": {
+      "title": "Responsable Qualité (F/H) - Casablanca - Français - Anglais",
+      "company": "Concentrix",
+      "url": "https://ma.linkedin.com/jobs/view/responsable-qualit%C3%A9-f-h-casablanca-fran%C3%A7ais-anglais-at-concentrix-4495807478",
+      "source": "linkedin_guest",
+      "contact_email": null,
+      "linkedin_url": "https://ma.linkedin.com/jobs/view/responsable-qualit%C3%A9-f-h-casablanca-fran%C3%A7ais-anglais-at-concentrix-4495807478",
+      "hr_name": null,
+      "hr_linkedin_url": null,
+      "is_remunerated": null,
+      "score": 75,
+      "matched_skills": [
+        "Qualité"
+      ],
+      "first_seen": "2026-11-27T12:07:05.379051+00:00",
+      "applied": false,
+      "applied_at": null,
+      "simulated": false,
+      "simulated_at": null,
+      "notified": true,
+      "notified_at": "2026-11-27T12:07:05.379051+00:00"
+    },
+    "77100b84274b7f85": {
+      "title": "Chargé d’affaires",
+      "company": "ALTEN Maroc",
+      "url": "https://www.rekrute.com/offre-emploi-charge-daffaires-recrutement-alten-maroc-rabat-188976.html",
+      "source": "rekrute",
+      "contact_email": "recrutement.maroc@alten.com",
+      "linkedin_url": null,
+      "hr_name": null,
+      "hr_linkedin_url": null,
+      "is_remunerated": null,
+      "score": 55,
+      "matched_skills": [
+        "Génie industriel"
+      ],
+      "first_seen": "2026-11-27T12:07:15.707936+00:00",
+      "applied": true,
+      "applied_at": "2026-11-27T12:07:15.707936+00:00",
+      "simulated": false,
+      "simulated_at": null,
+      "notified": true,
+      "notified_at": "2026-11-27T12:07:15.707936+00:00"
+    },
+    "bf8c05a4750155e6": {
+      "title": "Data Engineer Java / Scala Senior (H/F)",
+      "company": "CGI Technologies et Solutions Maroc",
+      "url": "https://www.rekrute.com/offre-emploi-data-engineer-java-scala-senior-hf-recrutement-cgi-technologies-et-solutions-maroc-casablanca-188636.html",
+      "source": "rekrute",
+      "contact_email": "carrieres.maroc@cgi.com",
+      "linkedin_url": null,
+      "hr_name": null,
+      "hr_linkedin_url": null,
+      "is_remunerated": true,
+      "score": 60,
+      "matched_skills": [
+        "Amélioration continue"
+      ],
+      "first_seen": "2026-11-27T12:07:21.110149+00:00",
+      "applied": true,
+      "applied_at": "2026-11-27T12:07:21.110149+00:00",
+      "simulated": false,
+      "simulated_at": null,
+      "notified": true,
+      "notified_at": "2026-11-27T12:07:21.110149+00:00"
     }
   },
-  "last_updated": "2026-11-27T06:07:09.455650+00:00",
-  "total_applied": 64,
+  "last_updated": "2026-11-27T12:07:21.110149+00:00",
+  "total_applied": 69,
   "total_simulated": 0
 }
