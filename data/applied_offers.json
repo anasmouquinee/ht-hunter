@@ -2354,7 +2354,7 @@
       "company": "Scalian",
       "url": "https://ma.linkedin.com/jobs/view/quality-process-engineer%E2%80%93-aerospace-at-scalian-4493622935",
       "source": "linkedin_guest",
-      "contact_email": null,
+      "contact_email": "recrutement.maroc@stelia-aerospace.com",
       "linkedin_url": "https://ma.linkedin.com/jobs/view/quality-process-engineer%E2%80%93-aerospace-at-scalian-4493622935",
       "hr_name": null,
       "hr_linkedin_url": null,
@@ -2365,12 +2365,12 @@
         "Supply chain"
       ],
       "first_seen": "2026-11-24T18:06:31.345904+00:00",
-      "applied": false,
-      "applied_at": null,
+      "applied": true,
+      "applied_at": "2026-11-27T06:07:09.455650+00:00",
       "simulated": false,
       "simulated_at": null,
       "notified": true,
-      "notified_at": "2026-11-24T18:06:31.345904+00:00"
+      "notified_at": "2026-11-27T06:07:09.455650+00:00"
     },
     "d4e9d298c8a5743b": {
       "title": "Responsable Qualité (F/H) - Casablanca - Français - Anglais",
@@ -6947,9 +6947,53 @@
       "simulated_at": null,
       "notified": true,
       "notified_at": "2026-11-26T21:52:27.115463+00:00"
+    },
+    "f5f44207e8a1d218": {
+      "title": "Responsable Qualité (F/H) - Casablanca - Français - Anglais",
+      "company": "Concentrix",
+      "url": "https://ma.linkedin.com/jobs/view/responsable-qualit%C3%A9-f-h-casablanca-fran%C3%A7ais-anglais-at-concentrix-4495549792",
+      "source": "linkedin_guest",
+      "contact_email": null,
+      "linkedin_url": "https://ma.linkedin.com/jobs/view/responsable-qualit%C3%A9-f-h-casablanca-fran%C3%A7ais-anglais-at-concentrix-4495549792",
+      "hr_name": null,
+      "hr_linkedin_url": null,
+      "is_remunerated": null,
+      "score": 75,
+      "matched_skills": [
+        "Qualité"
+      ],
+      "first_seen": "2026-11-27T06:07:06.327223+00:00",
+      "applied": false,
+      "applied_at": null,
+      "simulated": false,
+      "simulated_at": null,
+      "notified": true,
+      "notified_at": "2026-11-27T06:07:06.327223+00:00"
+    },
+    "36db6016fd2f1866": {
+      "title": "Coordinateur Logistique",
+      "company": "Bacha Coffee",
+      "url": "https://ma.linkedin.com/jobs/view/coordinateur-logistique-at-bacha-coffee-4472704171",
+      "source": "linkedin_guest",
+      "contact_email": null,
+      "linkedin_url": "https://ma.linkedin.com/jobs/view/coordinateur-logistique-at-bacha-coffee-4472704171",
+      "hr_name": null,
+      "hr_linkedin_url": null,
+      "is_remunerated": null,
+      "score": 70,
+      "matched_skills": [
+        "Logistique"
+      ],
+      "first_seen": "2026-11-27T06:07:06.333626+00:00",
+      "applied": false,
+      "applied_at": null,
+      "simulated": false,
+      "simulated_at": null,
+      "notified": true,
+      "notified_at": "2026-11-27T06:07:06.333626+00:00"
     }
   },
-  "last_updated": "2026-11-27T00:09:17.698904+00:00",
-  "total_applied": 63,
+  "last_updated": "2026-11-27T06:07:09.455650+00:00",
+  "total_applied": 64,
   "total_simulated": 0
 }
