@@ -7105,9 +7105,32 @@
       "simulated_at": null,
       "notified": true,
       "notified_at": "2026-11-27T12:07:21.110149+00:00"
+    },
+    "abede425514dcbea": {
+      "title": "Consultant - Data Engineer - F/H - MAROC",
+      "company": "Onepoint",
+      "url": "https://ma.linkedin.com/jobs/view/consultant-data-engineer-f-h-maroc-at-onepoint-4468993621",
+      "source": "linkedin_guest",
+      "contact_email": null,
+      "linkedin_url": "https://ma.linkedin.com/jobs/view/consultant-data-engineer-f-h-maroc-at-onepoint-4468993621",
+      "hr_name": null,
+      "hr_linkedin_url": null,
+      "is_remunerated": null,
+      "score": 65,
+      "matched_skills": [
+        "Amélioration continue",
+        "Qualité"
+      ],
+      "first_seen": "2026-11-27T18:06:45.701366+00:00",
+      "applied": false,
+      "applied_at": null,
+      "simulated": false,
+      "simulated_at": null,
+      "notified": true,
+      "notified_at": "2026-11-27T18:06:45.701366+00:00"
     }
   },
-  "last_updated": "2026-11-27T12:07:21.110149+00:00",
+  "last_updated": "2026-11-27T18:06:45.701366+00:00",
   "total_applied": 69,
   "total_simulated": 0
 }
