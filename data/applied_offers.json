@@ -7261,9 +7261,31 @@
       "simulated_at": null,
       "notified": true,
       "notified_at": "2026-11-28T06:06:34.263206+00:00"
+    },
+    "5f477ae4b06cdd6c": {
+      "title": "Technico-Commerciaux Juniors (H/F)",
+      "company": "ORH Assessment",
+      "url": "https://ma.linkedin.com/jobs/view/technico-commerciaux-juniors-h-f-at-orh-assessment-4495813307",
+      "source": "linkedin_guest",
+      "contact_email": null,
+      "linkedin_url": "https://ma.linkedin.com/jobs/view/technico-commerciaux-juniors-h-f-at-orh-assessment-4495813307",
+      "hr_name": "Abir MOUHI EDDINE",
+      "hr_linkedin_url": "https://ma.linkedin.com/in/abir-mouhi-eddine-54a00a189",
+      "is_remunerated": null,
+      "score": 71,
+      "matched_skills": [
+        "Logistique"
+      ],
+      "first_seen": "2026-11-28T12:07:15.960642+00:00",
+      "applied": false,
+      "applied_at": null,
+      "simulated": false,
+      "simulated_at": null,
+      "notified": true,
+      "notified_at": "2026-11-28T12:07:15.960642+00:00"
     }
   },
-  "last_updated": "2026-11-28T06:06:34.263206+00:00",
+  "last_updated": "2026-11-28T12:07:15.960642+00:00",
   "total_applied": 69,
   "total_simulated": 0
 }
