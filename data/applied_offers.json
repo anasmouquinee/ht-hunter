@@ -7128,9 +7128,97 @@
       "simulated_at": null,
       "notified": true,
       "notified_at": "2026-11-27T18:06:45.701366+00:00"
+    },
+    "57aa7c589d555b9d": {
+      "title": "Ingénieur production H/F",
+      "company": "TOTALCALL",
+      "url": "https://ma.linkedin.com/jobs/view/ing%C3%A9nieur-production-h-f-at-totalcall-4429980882",
+      "source": "linkedin_guest",
+      "contact_email": null,
+      "linkedin_url": "https://ma.linkedin.com/jobs/view/ing%C3%A9nieur-production-h-f-at-totalcall-4429980882",
+      "hr_name": null,
+      "hr_linkedin_url": null,
+      "is_remunerated": null,
+      "score": 70,
+      "matched_skills": [
+        "Ingénieur production"
+      ],
+      "first_seen": "2026-11-28T00:08:39.976883+00:00",
+      "applied": false,
+      "applied_at": null,
+      "simulated": false,
+      "simulated_at": null,
+      "notified": true,
+      "notified_at": "2026-11-28T00:08:39.976883+00:00"
+    },
+    "62e28f03ae44c8db": {
+      "title": "RESPONSABLE LOGISTIQUE",
+      "company": "Entreprise Partenaire (MarocAnnonces)",
+      "url": "https://www.marocannonces.com/categorie/309/Offres-emploi/annonce/10499289/RESPONSABLE-LOGISTIQUE.html",
+      "source": "marocannonces",
+      "contact_email": null,
+      "linkedin_url": null,
+      "hr_name": null,
+      "hr_linkedin_url": null,
+      "is_remunerated": null,
+      "score": 70,
+      "matched_skills": [
+        "Logistique"
+      ],
+      "first_seen": "2026-11-28T00:08:43.781109+00:00",
+      "applied": false,
+      "applied_at": null,
+      "simulated": false,
+      "simulated_at": null,
+      "notified": true,
+      "notified_at": "2026-11-28T00:08:43.781109+00:00"
+    },
+    "95df1f3e86bb8f72": {
+      "title": "Chargé(e) de planification inspection",
+      "company": "SGS",
+      "url": "https://ma.talent.com/view?id=647897509042718068",
+      "source": "talent",
+      "contact_email": null,
+      "linkedin_url": null,
+      "hr_name": null,
+      "hr_linkedin_url": null,
+      "is_remunerated": null,
+      "score": 55,
+      "matched_skills": [
+        "Planification"
+      ],
+      "first_seen": "2026-11-28T00:08:46.060296+00:00",
+      "applied": false,
+      "applied_at": null,
+      "simulated": false,
+      "simulated_at": null,
+      "notified": true,
+      "notified_at": "2026-11-28T00:08:46.060296+00:00"
+    },
+    "818bb4f99e51df15": {
+      "title": "Chargé(e) de planification inspection",
+      "company": "SGS",
+      "url": "https://ma.talent.com/view?id=647894092527635732",
+      "source": "talent",
+      "contact_email": null,
+      "linkedin_url": null,
+      "hr_name": null,
+      "hr_linkedin_url": null,
+      "is_remunerated": null,
+      "score": 55,
+      "matched_skills": [
+        "Planification"
+      ],
+      "first_seen": "2026-11-28T00:08:48.734178+00:00",
+      "applied": false,
+      "applied_at": null,
+      "simulated": false,
+      "simulated_at": null,
+      "notified": true,
+      "notified_at": "2026-11-28T00:08:48.734178+00:00"
     }
   },
-  "last_updated": "2026-11-27T18:06:45.701366+00:00",
+  "last_updated": "2026-11-28T00:08:48.734178+00:00",
   "total_applied": 69,
   "total_simulated": 0
 }
