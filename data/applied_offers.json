@@ -7216,9 +7216,54 @@
       "simulated_at": null,
       "notified": true,
       "notified_at": "2026-11-28T00:08:48.734178+00:00"
+    },
+    "c4fa1cfbcc920364": {
+      "title": "Responsable Qualité (F/H) - Casablanca - Français - Anglais",
+      "company": "Concentrix",
+      "url": "https://ma.linkedin.com/jobs/view/responsable-qualit%C3%A9-f-h-casablanca-fran%C3%A7ais-anglais-at-concentrix-4495895375",
+      "source": "linkedin_guest",
+      "contact_email": null,
+      "linkedin_url": "https://ma.linkedin.com/jobs/view/responsable-qualit%C3%A9-f-h-casablanca-fran%C3%A7ais-anglais-at-concentrix-4495895375",
+      "hr_name": null,
+      "hr_linkedin_url": null,
+      "is_remunerated": null,
+      "score": 75,
+      "matched_skills": [
+        "Qualité"
+      ],
+      "first_seen": "2026-11-28T06:06:34.256055+00:00",
+      "applied": false,
+      "applied_at": null,
+      "simulated": false,
+      "simulated_at": null,
+      "notified": true,
+      "notified_at": "2026-11-28T06:06:34.256055+00:00"
+    },
+    "a3fdc1439f56b0bd": {
+      "title": "Process Engineering",
+      "company": "STMicroelectronics",
+      "url": "https://ma.linkedin.com/jobs/view/process-engineering-at-stmicroelectronics-4495859285",
+      "source": "linkedin_guest",
+      "contact_email": null,
+      "linkedin_url": "https://ma.linkedin.com/jobs/view/process-engineering-at-stmicroelectronics-4495859285",
+      "hr_name": null,
+      "hr_linkedin_url": null,
+      "is_remunerated": null,
+      "score": 60,
+      "matched_skills": [
+        "Continuous improvement",
+        "Fmea"
+      ],
+      "first_seen": "2026-11-28T06:06:34.263206+00:00",
+      "applied": false,
+      "applied_at": null,
+      "simulated": false,
+      "simulated_at": null,
+      "notified": true,
+      "notified_at": "2026-11-28T06:06:34.263206+00:00"
     }
   },
-  "last_updated": "2026-11-28T00:08:48.734178+00:00",
+  "last_updated": "2026-11-28T06:06:34.263206+00:00",
   "total_applied": 69,
   "total_simulated": 0
 }
